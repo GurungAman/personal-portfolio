@@ -25,8 +25,8 @@ body {
   transition: transform 0.3s, -webkit-transform 0.3s;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
-  -webkit-box-shadow: -12px 12px 12px #6a6c6994;
-          box-shadow: -12px 12px 12px #6a6c6994;
+  -webkit-box-shadow: -13px 14px 8px #6a6c6994;
+          box-shadow: -13px 14px 8px #6a6c6994;
 }
 
 #header-panel #about-me-btn, #about-me #resume-btn {
@@ -244,11 +244,15 @@ body {
 #contact {
   background: #e5e2e2;
   background: linear-gradient(168deg, #cadfcc 0%, #cad1ce 48%, #6191b4 100%);
-  padding: 2rem 0;
+  padding: 3rem 0;
+}
+
+#contact textarea {
+  resize: none;
 }
 
 #contact #contact-form,
-#contact #socials {
+#contact #contact-details {
   padding: 3.5rem;
   background: #fbfbfb;
   background: linear-gradient(168deg, #fbfbfb 0%, rgba(233, 231, 231, 0.874649) 44%, rgba(234, 234, 234, 0.978581) 100%);
@@ -273,6 +277,77 @@ body {
           box-shadow: -6px 12px 16px #7c7b7b;
 }
 
+#contact #contact-details .marker {
+  background-color: #2e2b12;
+  color: #ffffff;
+  border-radius: 50%;
+  height: 2rem;
+  width: auto;
+}
+
+#contact #contact-details .socials {
+  color: #000000e0;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+#contact #contact-details .socials:hover {
+  background: #74867fc7;
+  color: #ffffff;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 7px 15px 16px #7c7b7b;
+          box-shadow: 7px 15px 16px #7c7b7b;
+}
+
+#footer {
+  background: #000000;
+  color: #ffffff;
+  padding: 1.25rem 0 0.5rem 0;
+}
+
+#footer a:hover {
+  text-decoration: none;
+}
+
+#footer .copyright {
+  color: #ffffff;
+  display: inline-block;
+}
+
+#footer .copyright:hover {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+  -webkit-box-shadow: 8px 8px 13px #6e6e6e67;
+          box-shadow: 8px 8px 13px #6e6e6e67;
+}
+
+#footer .socials {
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 0.5rem;
+  display: inline-block;
+}
+
+#footer .socials:hover {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+  -webkit-box-shadow: 8px 8px 13px #464b44;
+          box-shadow: 8px 8px 13px #464b44;
+}
+
 /* X-Large devices (large desktops, less than 1400px) */
 @media (max-width: 1399.98px) {
   #header-panel {
@@ -293,6 +368,9 @@ body {
   #header-panel #image {
     height: 16rem;
     width: 100%;
+  }
+  #contact #contact-details .socials {
+    padding: 0.7rem;
   }
 }
 
@@ -319,8 +397,11 @@ body {
     margin: 1rem auto;
   }
   #contact #contact-form,
-  #contact #socials {
+  #contact #contact-details {
     padding: 2rem;
+  }
+  #contact #contact-details .socials {
+    padding: 0.55rem;
   }
 }
 
@@ -342,9 +423,15 @@ body {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
+  #contact {
+    padding: 2rem 0 0 0;
+  }
   #contact #contact-form,
-  #contact #socials {
+  #contact #contact-details {
     padding: 3rem;
+  }
+  #contact #contact-details .socials {
+    padding: 1.5rem;
   }
 }
 
@@ -360,6 +447,9 @@ body {
   #header-panel #image {
     height: 14rem;
     width: 100%;
+  }
+  #contact #contact-details .socials {
+    padding: 0.8rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

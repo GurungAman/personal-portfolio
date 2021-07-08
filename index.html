@@ -39,7 +39,6 @@
       href="https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap"
       rel="stylesheet"
     />
-
     <title>Portfolio</title>
   </head>
 
@@ -60,7 +59,9 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon">
+            
+          </span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -133,7 +134,7 @@
       </div>
     </section>
 
-    <section id="about-me" data-aos="fade-up">
+    <section id="about-me">
       <div class="container">
         <!-- header -->
         <div class="h1 text-center pb-2">About Me</div>
@@ -232,6 +233,8 @@
 
             <!-- resume button -->
             <div
+              data-aos="zoom-in-up"
+              data-aos-duration="600"
               class="
                 py-3
                 d-flex
@@ -267,9 +270,14 @@
 
         <div class="row mt-5">
           <!-- Start contact Form -->
-          <div class="col-md-6 mb-3 mb-md-0" id="contact-form">
+          <div
+            class="col-md-6 mb-3 mb-md-0"
+            data-aos="fade-up-right"
+            data-aos-duration="800"
+            id="contact-form"
+          >
             <form action="#">
-              <h3 class="text-center mb-5">Get in touch</h3>
+              <h3 class="text-center mb-4">Get in touch</h3>
               <div class="row form-group">
                 <div class="col-md-12 col-lg-6 mb-3 mb-md-0">
                   <label for="fname">First Name</label>
@@ -307,34 +315,146 @@
               </div>
               <div class="row form-group">
                 <div class="col-md-12">
-                  <input type="submit" id="send-message" value="Send Message" class="btn" />
+                  <input
+                    type="submit"
+                    id="send-message"
+                    value="Send Message"
+                    class="btn"
+                  />
                 </div>
               </div>
             </form>
           </div>
           <!-- End Contact form -->
 
-          <!-- Start Socials -->
-          <div class="col-md-5 offset-0 offset-md-1" id="socials">
-            <h3 class="text-center mb-5">Find Me Here.</h3>
-            <div class="p-4 mb-3">
-              <div class="mb-0 font-weight-bold">Address</div>
+          <!-- Start contact-details -->
+          <div
+            class="col-md-5 offset-0 offset-md-1"
+            data-aos="fade-up-left"
+            data-aos-duration="800"
+            id="contact-details"
+          >
+            <h3 class="text-center mb-3">Find Me Here.</h3>
+            <div class="p-3 mb-3">
+              <div class="mb-0 font-weight-bold">
+                Address
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
               <div class="mb-4">
                 Nayagaon, Pokhara-15 <br />
                 Kaski, Nepal
               </div>
-              <div class="mb-0 font-weight-bold">Phone</div>
+
+              <div class="mb-0 font-weight-bold">
+                Phone
+                <i class="fas fa-phone"></i>
+              </div>
               <div class="mb-4">
                 <span> +977-9815131789 </span>
               </div>
-              <div class="mb-0 font-weight-bold">Email Address</div>
-              <div class="mb-0">
+              <div class="mb-0 font-weight-bold">
+                Email Address
+                <i class="far fa-paper-plane"></i>
+              </div>
+              <div class="mb-4">
                 <span> amenag30@gmail.com </span>
+              </div>
+
+              <h3 class="text-center mt-4">My Socials</h3>
+
+              <div class="row text-center">
+                <a
+                  href="https://www.linkedin.com/in/aman-gurung-6bb671202/"
+                  class="col-3 offset-2 mt-2 socials"
+                  target="_blank"
+                >
+                  <i class="fab fa-linkedin-in fa-3x"></i>
+                </a>
+
+                <a
+                  href="https://github.com/GurungAman"
+                  class="col-3 offset-2 mt-2 socials"
+                  target="_blank"
+                >
+                  <i class="fab fa-github fa-3x"></i>
+                </a>
+              </div>
+
+              <div class="row text-center">
+                <a
+                  href="https://www.instagram.com/_gurunq_aman/"
+                  class="col-3 offset-2 mt-3 socials"
+                  target="_blank"
+                >
+                  <i class="fab fa-instagram fa-3x"></i>
+                </a>
+
+                <a
+                  href="https://www.facebook.com/grg.aman.07/"
+                  class="col-3 offset-2 mt-3 socials"
+                  target="_blank"
+                >
+                  <i class="fab fa-facebook-f fa-3x"></i>
+                </a>
               </div>
             </div>
           </div>
-          <!-- end socials -->
+          <!-- end contatc-details -->
         </div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <div class="text-center mt-2">
+        <span>
+          <i class="fas fa-copyright fa-lg"></i>
+          Developed by <a href="#" class="copyright">Aman Gurung.</a>
+        </span>
+      </div>
+
+      <div class="text-center mt-2">
+        <span class="col">
+          <a
+            href="https://www.linkedin.com/in/aman-gurung-6bb671202/"
+            class="socials"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin-in fa-lg"></i>
+          </a>
+        </span>
+
+        <!-- <a href="https://www.linkedin.com/in/aman-gurung-6bb671202/" class="socials" target="_blank">
+          <i class="fab fa-linkedin-in fa-lg"></i>
+        </a> -->
+
+        <span class="col">
+          <a
+            href="https://github.com/GurungAman"
+            class="socials"
+            target="_blank"
+          >
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+        </span>
+
+        <span class="col">
+          <a
+            href="https://www.instagram.com/_gurunq_aman/"
+            class="socials"
+            target="_blank"
+          >
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+        </span>
+        <span class="col">
+          <a
+            href="https://www.facebook.com/grg.aman.07/"
+            class="socials"
+            target="_blank"
+          >
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+        </span>
       </div>
     </section>
 
