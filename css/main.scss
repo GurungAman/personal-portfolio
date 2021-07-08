@@ -1,0 +1,332 @@
+$primary-font: "Montserrat", "sans-serif";
+$secondary-font: "Titillium Web", "sans-serif";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgba(240, 235, 235, 0.822);
+  font-family: $primary-font;
+}
+#back-to-top {
+  background-color: #0f967f;
+  color: #ffffff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: none;
+
+  &:hover {
+    transition: transform 0.3s;
+    transform: translateY(-5px);
+    box-shadow: -12px 12px 12px #6a6c6994;
+  }
+}
+
+%button-resume {
+  padding: 0.5rem 2.5rem;
+  border-radius: 56px;
+  box-shadow: -4px 11px 20px 4px #7d9190;
+  background: rgb(224, 235, 239);
+  background: linear-gradient(
+    153deg,
+    rgba(224, 235, 239, 1) 0%,
+    rgba(255, 255, 255, 0.9847101790181706) 46%,
+    rgba(167, 204, 232, 1) 100%
+  );
+}
+
+#primary-navbar {
+  //   z-index: 999999;
+
+  &.scrolled-navbar {
+    background: #ffffff;
+  }
+
+  .navbar-brand {
+    font-family: "Aguafina Script", "cursive";
+    letter-spacing: 0.25rem;
+    font-size: 2.5rem;
+    padding: 0.3rem 1.25rem;
+    color: #0c312b;
+
+    &:hover {
+      transition: transform 0.3s;
+      transform: translateY(-5px);
+    }
+  }
+
+  ul > li > a {
+    padding: 0.7rem 2rem;
+    font-size: 1.2rem;
+    color: #2e2b12;
+    font-weight: 500;
+
+    &:hover {
+      background: linear-gradient(
+        to right,
+        #94cec9 0%,
+        #74cac9 51%,
+        rgb(147, 176, 211) 100%
+      );
+      opacity: 0.7;
+      box-shadow: -16px 12px 20px 3px #0f967f;
+      border-radius: 0.5rem;
+      transition: transform 0.2s;
+      transform: translateY(-4px);
+      color: #1f1c03;
+    }
+  }
+  .navbar-toggler {
+    color: #ffffff;
+    background-color: transparent;
+    background-image: url("../images/breadcrumb.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    overflow: hidden;
+
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+#header-panel {
+  background-image: url("../images/background-header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 35rem;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 8rem;
+
+  .wave {
+    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+    animation-duration: 3s; /* Change to speed up or slow down */
+    animation-iteration-count: infinite; /* Never stop waving :) */
+    transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+    display: inline-block;
+
+    text-shadow: -14px 11px 20px #088b76;
+  }
+
+  @keyframes wave-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    } /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    } /* Reset for the last half to pause */
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  #about-me-btn {
+    @extend %button-resume;
+  }
+  #image {
+    height: 20rem;
+    width: 100%;
+  }
+}
+
+#about-me {
+  padding-top: 3rem;
+  .h1 {
+    font-size: 2.2rem;
+  }
+  .h3 {
+    font-size: 2rem;
+  }
+
+  #text-carousel {
+    letter-spacing: 0.15rem;
+  }
+
+  #resume-btn {
+    @extend %button-resume;
+  }
+  #logos {
+    .nginx {
+      height: 3rem;
+    }
+
+    img {
+      height: 4rem;
+      width: auto;
+      margin: 1rem auto;
+    }
+  }
+
+  .content {
+    font-family: $secondary-font;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+  }
+}
+
+#projects {
+  padding-top: 3rem;
+}
+
+#contact {
+  background: rgb(229, 226, 226);
+  background: linear-gradient(168deg, #cadfcc 0%, #cad1ce 48%, #6191b4 100%);
+  padding: 2rem 0;
+
+  #contact-form,
+  #socials {
+    padding: 3.5rem;
+    background: rgb(251, 251, 251);
+    background: linear-gradient(
+      168deg,
+      rgba(251, 251, 251, 1) 0%,
+      rgba(233, 231, 231, 0.8746487906809604) 44%,
+      rgba(234, 234, 234, 0.9785813749506233) 100%
+    );
+  }
+  
+  #contact-form{
+      #send-message{
+          color: rgb(255, 255, 255);
+
+          border-radius: 62px;
+          background: #3a3b3b65;
+          box-shadow:  -12px 12px 12px #b3bdae;
+
+          &:hover {
+            transition: transform 0.3s;
+            transform: translateY(-5px);
+            box-shadow: -6px 12px 16px #7c7b7b;
+          }
+      }
+  }
+}
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+  #header-panel {
+    height: 30rem;
+    #image {
+      height: 19rem;
+      width: 100%;
+    }
+  }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  #header-panel {
+    padding-top: 5rem;
+    height: 25rem;
+
+    #image {
+      height: 16rem;
+      width: 100%;
+    }
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: #fdfdfd;
+    border-radius: 25px;
+    box-shadow: -26px 26px 51px #646464;
+  }
+
+  #header-panel {
+    padding-top: 5rem;
+    height: 30rem;
+  }
+
+  #about-me {
+    #logos {
+      .nginx,
+      .django,
+      .drf,
+      .jquery {
+        height: 3rem;
+      }
+
+      img {
+        height: 4rem;
+        width: auto;
+        margin: 1rem auto;
+      }
+    }
+  }
+
+  #contact {
+    #contact-form,
+    #socials {
+      padding: 2rem;
+    }
+  }
+}
+
+/* X-Small devices (portrait phones, less than 768px) */
+@media (max-width: 767.98px) {
+  #header-panel {
+    .h1 {
+      font-size: 1.8rem;
+    }
+    .h4 {
+      font-size: 1.25rem;
+    }
+    #image {
+      height: 14rem;
+      width: 100%;
+    }
+  }
+
+  #about-me {
+    #content-about-me {
+      flex-direction: column-reverse;
+    }
+  }
+
+  #contact {
+    #contact-form,
+    #socials {
+      padding: 3rem;
+    }
+  }
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  #primary-navbar {
+    .navbar {
+      padding: 1rem 1rem 0 0;
+      justify-content: space-around;
+    }
+  }
+  #header-panel {
+    height: 40rem;
+    #image {
+      height: 14rem;
+      width: 100%;
+    }
+  }
+}

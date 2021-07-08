@@ -1,0 +1,365 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgba(240, 235, 235, 0.822);
+  font-family: "Montserrat", "sans-serif";
+}
+
+#back-to-top {
+  background-color: #0f967f;
+  color: #ffffff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: none;
+}
+
+#back-to-top:hover {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: -12px 12px 12px #6a6c6994;
+          box-shadow: -12px 12px 12px #6a6c6994;
+}
+
+#header-panel #about-me-btn, #about-me #resume-btn {
+  padding: 0.5rem 2.5rem;
+  border-radius: 56px;
+  -webkit-box-shadow: -4px 11px 20px 4px #7d9190;
+          box-shadow: -4px 11px 20px 4px #7d9190;
+  background: #e0ebef;
+  background: linear-gradient(153deg, #e0ebef 0%, rgba(255, 255, 255, 0.98471) 46%, #a7cce8 100%);
+}
+
+#primary-navbar.scrolled-navbar {
+  background: #ffffff;
+}
+
+#primary-navbar .navbar-brand {
+  font-family: "Aguafina Script", "cursive";
+  letter-spacing: 0.25rem;
+  font-size: 2.5rem;
+  padding: 0.3rem 1.25rem;
+  color: #0c312b;
+}
+
+#primary-navbar .navbar-brand:hover {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+#primary-navbar ul > li > a {
+  padding: 0.7rem 2rem;
+  font-size: 1.2rem;
+  color: #2e2b12;
+  font-weight: 500;
+}
+
+#primary-navbar ul > li > a:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#94cec9), color-stop(51%, #74cac9), to(#93b0d3));
+  background: linear-gradient(to right, #94cec9 0%, #74cac9 51%, #93b0d3 100%);
+  opacity: 0.7;
+  -webkit-box-shadow: -16px 12px 20px 3px #0f967f;
+          box-shadow: -16px 12px 20px 3px #0f967f;
+  border-radius: 0.5rem;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+  color: #1f1c03;
+}
+
+#primary-navbar .navbar-toggler {
+  color: #ffffff;
+  background-color: transparent;
+  background-image: url("../images/breadcrumb.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header-panel {
+  background-image: url("../images/background-header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 35rem;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 8rem;
+}
+
+#header-panel .wave {
+  -webkit-animation-name: wave-animation;
+          animation-name: wave-animation;
+  /* Refers to the name of your @keyframes element below */
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  /* Change to speed up or slow down */
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  /* Never stop waving :) */
+  -webkit-transform-origin: 70% 70%;
+          transform-origin: 70% 70%;
+  /* Pivot around the bottom-left palm */
+  display: inline-block;
+  text-shadow: -14px 11px 20px #088b76;
+}
+
+@-webkit-keyframes wave-animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(14deg);
+            transform: rotate(14deg);
+  }
+  /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+  }
+  30% {
+    -webkit-transform: rotate(14deg);
+            transform: rotate(14deg);
+  }
+  40% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  60% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  /* Reset for the last half to pause */
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes wave-animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(14deg);
+            transform: rotate(14deg);
+  }
+  /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+  }
+  30% {
+    -webkit-transform: rotate(14deg);
+            transform: rotate(14deg);
+  }
+  40% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  60% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  /* Reset for the last half to pause */
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+#header-panel #image {
+  height: 20rem;
+  width: 100%;
+}
+
+#about-me {
+  padding-top: 3rem;
+}
+
+#about-me .h1 {
+  font-size: 2.2rem;
+}
+
+#about-me .h3 {
+  font-size: 2rem;
+}
+
+#about-me #text-carousel {
+  letter-spacing: 0.15rem;
+}
+
+#about-me #logos .nginx {
+  height: 3rem;
+}
+
+#about-me #logos img {
+  height: 4rem;
+  width: auto;
+  margin: 1rem auto;
+}
+
+#about-me .content {
+  font-family: "Titillium Web", "sans-serif";
+  line-height: 1.5;
+  font-size: 1.2rem;
+  letter-spacing: 0.15rem;
+}
+
+#projects {
+  padding-top: 3rem;
+}
+
+#contact {
+  background: #e5e2e2;
+  background: linear-gradient(168deg, #cadfcc 0%, #cad1ce 48%, #6191b4 100%);
+  padding: 2rem 0;
+}
+
+#contact #contact-form,
+#contact #socials {
+  padding: 3.5rem;
+  background: #fbfbfb;
+  background: linear-gradient(168deg, #fbfbfb 0%, rgba(233, 231, 231, 0.874649) 44%, rgba(234, 234, 234, 0.978581) 100%);
+}
+
+#contact #contact-form #send-message {
+  color: white;
+  border-radius: 62px;
+  background: #3a3b3b65;
+  -webkit-box-shadow: -12px 12px 12px #b3bdae;
+          box-shadow: -12px 12px 12px #b3bdae;
+}
+
+#contact #contact-form #send-message:hover {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: -6px 12px 16px #7c7b7b;
+          box-shadow: -6px 12px 16px #7c7b7b;
+}
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+  #header-panel {
+    height: 30rem;
+  }
+  #header-panel #image {
+    height: 19rem;
+    width: 100%;
+  }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  #header-panel {
+    padding-top: 5rem;
+    height: 25rem;
+  }
+  #header-panel #image {
+    height: 16rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: #fdfdfd;
+    border-radius: 25px;
+    -webkit-box-shadow: -26px 26px 51px #646464;
+            box-shadow: -26px 26px 51px #646464;
+  }
+  #header-panel {
+    padding-top: 5rem;
+    height: 30rem;
+  }
+  #about-me #logos .nginx,
+  #about-me #logos .django,
+  #about-me #logos .drf,
+  #about-me #logos .jquery {
+    height: 3rem;
+  }
+  #about-me #logos img {
+    height: 4rem;
+    width: auto;
+    margin: 1rem auto;
+  }
+  #contact #contact-form,
+  #contact #socials {
+    padding: 2rem;
+  }
+}
+
+/* X-Small devices (portrait phones, less than 768px) */
+@media (max-width: 767.98px) {
+  #header-panel .h1 {
+    font-size: 1.8rem;
+  }
+  #header-panel .h4 {
+    font-size: 1.25rem;
+  }
+  #header-panel #image {
+    height: 14rem;
+    width: 100%;
+  }
+  #about-me #content-about-me {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #contact #contact-form,
+  #contact #socials {
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #primary-navbar .navbar {
+    padding: 1rem 1rem 0 0;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #header-panel {
+    height: 40rem;
+  }
+  #header-panel #image {
+    height: 14rem;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
