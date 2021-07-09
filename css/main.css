@@ -1,10 +1,12 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background-color: rgba(240, 235, 235, 0.822);
   font-family: "Montserrat", "sans-serif";
+  overflow-x: hidden;
 }
 
 #back-to-top {
@@ -38,6 +40,13 @@ body {
   background: linear-gradient(153deg, #e0ebef 0%, rgba(255, 255, 255, 0.98471) 46%, #a7cce8 100%);
 }
 
+#primary-navbar {
+  z-index: 999999;
+  position: fixed;
+  top: 0;
+  padding: 2.5rem 0;
+}
+
 #primary-navbar.scrolled-navbar {
   background: #ffffff;
 }
@@ -59,14 +68,14 @@ body {
           transform: translateY(-5px);
 }
 
-#primary-navbar ul > li > a {
-  padding: 0.7rem 2rem;
+#primary-navbar ul > .nav-link {
+  padding: 0.6rem 1.5rem;
   font-size: 1.2rem;
   color: #2e2b12;
   font-weight: 500;
 }
 
-#primary-navbar ul > li > a:hover {
+#primary-navbar ul > .nav-link:hover {
   background: -webkit-gradient(linear, left top, right top, from(#94cec9), color-stop(51%, #74cac9), to(#93b0d3));
   background: linear-gradient(to right, #94cec9 0%, #74cac9 51%, #93b0d3 100%);
   opacity: 0.7;
@@ -80,6 +89,29 @@ body {
   -webkit-transform: translateY(-4px);
           transform: translateY(-4px);
   color: #1f1c03;
+}
+
+#primary-navbar .hover-effect {
+  text-decoration: none;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.2rem;
+  color: #2e2b12;
+  font-weight: 500;
+}
+
+#primary-navbar .hover-effect:hover {
+  background: black;
+  opacity: 0.7;
+  -webkit-box-shadow: -9px 9px 16px 2px #797979f6;
+          box-shadow: -9px 9px 16px 2px #797979f6;
+  border-radius: 0.5rem;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+  color: #ffffff;
 }
 
 #primary-navbar .navbar-toggler {
@@ -241,6 +273,12 @@ body {
   padding-top: 3rem;
 }
 
+#projects .container {
+  background: white;
+  height: 30rem;
+  padding: 2.5rem 0;
+}
+
 #contact {
   background: #e5e2e2;
   background: linear-gradient(168deg, #cadfcc 0%, #cad1ce 48%, #6191b4 100%);
@@ -375,11 +413,37 @@ body {
 }
 
 @media (max-width: 991.98px) {
-  .navbar-collapse {
-    background: #fdfdfd;
-    border-radius: 25px;
+  #primary-navbar .navbar-collapse {
+    background: #fafafa;
+    border-radius: 1.5rem;
     -webkit-box-shadow: -26px 26px 51px #646464;
             box-shadow: -26px 26px 51px #646464;
+  }
+  #primary-navbar ul > a > li:hover {
+    background: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  #primary-navbar .navbar-nav > .nav-link:hover {
+    background: -webkit-gradient(linear, left top, right top, from(#b5d5d2), color-stop(51%, #a0cfce), to(#a5c1e4));
+    background: linear-gradient(to right, #b5d5d2 0%, #a0cfce 51%, #a5c1e4 100%);
+    opacity: 0.7;
+    -webkit-box-shadow: -16px 12px 20px 3px #1f796a;
+            box-shadow: -16px 12px 20px 3px #1f796a;
+    border-radius: 0;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+    color: #000000;
+  }
+  #primary-navbar .navbar-nav > .nav-link:nth-child(1):hover {
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+  #primary-navbar .navbar-nav > .nav-link:nth-child(4):hover {
+    border-radius: 0 0 1.5rem 1.5rem;
   }
   #header-panel {
     padding-top: 5rem;
@@ -437,7 +501,7 @@ body {
 
 @media (max-width: 575.98px) {
   #primary-navbar .navbar {
-    padding: 1rem 1rem 0 0;
+    padding: 0 1rem 0;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
@@ -447,6 +511,9 @@ body {
   #header-panel #image {
     height: 14rem;
     width: 100%;
+  }
+  #about-me {
+    padding-top: 1.5rem;
   }
   #contact #contact-details .socials {
     padding: 0.8rem;

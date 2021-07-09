@@ -3,12 +3,15 @@ $secondary-font: "Titillium Web", "sans-serif";
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background-color: rgba(240, 235, 235, 0.822);
   font-family: $primary-font;
+  overflow-x: hidden;
 }
+
 #back-to-top {
   background-color: #0f967f;
   color: #ffffff;
@@ -40,7 +43,10 @@ body {
 }
 
 #primary-navbar {
-  //   z-index: 999999;
+  z-index: 999999;
+  position: fixed;
+  top: 0;
+  padding: 2.5rem 0;
 
   &.scrolled-navbar {
     background: #ffffff;
@@ -59,8 +65,8 @@ body {
     }
   }
 
-  ul > li > a {
-    padding: 0.7rem 2rem;
+  ul > .nav-link {
+    padding: 0.6rem 1.5rem;
     font-size: 1.2rem;
     color: #2e2b12;
     font-weight: 500;
@@ -80,6 +86,26 @@ body {
       color: #1f1c03;
     }
   }
+
+  .hover-effect {
+    text-decoration: none;
+
+    padding: 0.6rem 1.5rem;
+    font-size: 1.2rem;
+    color: #2e2b12;
+    font-weight: 500;
+
+    &:hover {
+      background: black;
+      opacity: 0.7;
+      box-shadow: -9px 9px 16px 2px #797979f6;
+      border-radius: 0.5rem;
+      transition: transform 0.2s;
+      transform: translateY(-4px);
+      color: #ffffff;
+    }
+  }
+
   .navbar-toggler {
     color: #ffffff;
     background-color: transparent;
@@ -187,6 +213,12 @@ body {
 
 #projects {
   padding-top: 3rem;
+
+  .container {
+    background: white;
+    height: 30rem;
+    padding: 2.5rem 0;
+  }
 }
 
 #contact {
@@ -315,10 +347,46 @@ body {
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
-  .navbar-collapse {
-    background: #fdfdfd;
-    border-radius: 25px;
-    box-shadow: -26px 26px 51px #646464;
+  #primary-navbar {
+    .navbar-collapse {
+      background: #fafafa;
+      border-radius: 1.5rem;
+      box-shadow: -26px 26px 51px #646464;
+    }
+
+    ul > a > li {
+      &:hover {
+        background: none;
+        box-shadow: none;
+      }
+    }
+
+    .navbar-nav > .nav-link {
+      &:hover {
+        background: linear-gradient(
+          to right,
+          #b5d5d2 0%,
+          #a0cfce 51%,
+          #a5c1e4 100%
+        );
+        opacity: 0.7;
+        box-shadow: -16px 12px 20px 3px #1f796a;
+        border-radius: 0;
+        transition: transform 0.2s;
+        transform: translateY(-4px);
+        color: #000000;
+      }
+      &:nth-child(1) {
+        &:hover {
+          border-radius: 1.5rem 1.5rem 0 0;
+        }
+      }
+      &:nth-child(4) {
+        &:hover {
+          border-radius: 0 0 1.5rem 1.5rem;
+        }
+      }
+    }
   }
 
   #header-panel {
@@ -385,10 +453,10 @@ body {
       padding: 3rem;
     }
     #contact-details {
-        .socials {
-          padding: 1.5rem;
-        }
+      .socials {
+        padding: 1.5rem;
       }
+    }
   }
 }
 
@@ -396,7 +464,7 @@ body {
 @media (max-width: 575.98px) {
   #primary-navbar {
     .navbar {
-      padding: 1rem 1rem 0 0;
+      padding: 0 1rem 0;
       justify-content: space-around;
     }
   }
@@ -408,11 +476,15 @@ body {
     }
   }
 
+  #about-me {
+    padding-top: 1.5rem;
+  }
+
   #contact {
     #contact-details {
-        .socials {
-          padding: 0.8rem;
-        }
+      .socials {
+        padding: 0.8rem;
       }
+    }
   }
 }
