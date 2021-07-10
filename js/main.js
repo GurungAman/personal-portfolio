@@ -23,15 +23,12 @@ $(function () {
 
         hover_effect.addClass("hover-effect");
       }
-
-      // log_in_button.addClass('scrolled-log-in-button');
     } else {
       navbar.removeClass("scrolled-navbar");
 
       hover_effect.addClass("nav-link");
       hover_effect.removeClass("hover-effect");
 
-      // log_in_button.removeClass('scrolled-log-in-button');
     }
   });
 });

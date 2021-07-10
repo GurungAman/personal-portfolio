@@ -44,19 +44,14 @@ body {
   z-index: 999999;
   position: fixed;
   top: 0;
-  padding: 2.5rem 0;
 }
 
 #primary-navbar.scrolled-navbar {
   background: #ffffff;
 }
 
-#primary-navbar .navbar-brand {
-  font-family: "Aguafina Script", "cursive";
-  letter-spacing: 0.25rem;
-  font-size: 2.5rem;
-  padding: 0.3rem 1.25rem;
-  color: #0c312b;
+#primary-navbar .navbar {
+  padding: 0.5rem 2.5rem;
 }
 
 #primary-navbar .navbar-brand:hover {
@@ -68,9 +63,14 @@ body {
           transform: translateY(-5px);
 }
 
+#primary-navbar .navbar-brand #brand-logo {
+  width: auto;
+  height: 3.5rem;
+}
+
 #primary-navbar ul > .nav-link {
   padding: 0.6rem 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: #2e2b12;
   font-weight: 500;
 }
@@ -94,7 +94,7 @@ body {
 #primary-navbar .hover-effect {
   text-decoration: none;
   padding: 0.6rem 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: #2e2b12;
   font-weight: 500;
 }
@@ -134,7 +134,7 @@ body {
   background-image: url("../images/background-header.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 35rem;
+  height: 34rem;
   width: 100%;
   overflow: hidden;
   padding-top: 8rem;
@@ -237,7 +237,7 @@ body {
 }
 
 #about-me {
-  padding-top: 3rem;
+  padding-top: 5rem;
 }
 
 #about-me .h1 {
@@ -270,19 +270,93 @@ body {
 }
 
 #projects {
-  padding-top: 3rem;
+  padding-top: 5rem;
 }
 
-#projects .container {
-  background: white;
-  height: 30rem;
-  padding: 2.5rem 0;
+#projects .project-content {
+  position: relative;
+  width: 18rem;
+  height: auto;
+  max-width: 18rem;
+  margin: auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#projects .project-content .content-overlay {
+  border-radius: 1.5rem;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+#projects .project-content:hover .content-details {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+#projects .project-content:hover .content-overlay {
+  opacity: 1;
+}
+
+#projects .project-content .content-image {
+  width: 100%;
+}
+
+#projects .project-content .content-details {
+  color: white;
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#projects .project-content .fadeIn-bottom {
+  top: 80%;
+}
+
+#projects .project-content a {
+  text-decoration: none;
+  display: inline;
+  background: #000000;
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+}
+
+#projects .project-content .content-details-lg-screen {
+  display: none;
+  margin-top: 0.5rem;
+}
+
+#projects .project-content .content-details-lg-screen .project-buttons {
+  font-size: 0.8rem;
+  margin-top: 0.6rem;
 }
 
 #contact {
   background: #e5e2e2;
   background: linear-gradient(168deg, #cadfcc 0%, #cad1ce 48%, #6191b4 100%);
-  padding: 3rem 0;
+  margin-top: 3rem;
+  padding: 2rem 0;
 }
 
 #contact textarea {
@@ -460,6 +534,28 @@ body {
     width: auto;
     margin: 1rem auto;
   }
+  #projects .project-content {
+    width: 16rem;
+    height: 20rem;
+  }
+  #projects .project-content .content-overlay {
+    display: none;
+  }
+  #projects .project-content:hover .content-details {
+    display: none;
+  }
+  #projects .project-content:hover .content-overlay {
+    display: none;
+  }
+  #projects .project-content .content-details {
+    display: none;
+  }
+  #projects .project-content .content-image {
+    width: 90%;
+  }
+  #projects .project-content .content-details-lg-screen {
+    display: block;
+  }
   #contact #contact-form,
   #contact #contact-details {
     padding: 2rem;
@@ -488,7 +584,7 @@ body {
             flex-direction: column-reverse;
   }
   #contact {
-    padding: 2rem 0 0 0;
+    padding-bottom: 0;
   }
   #contact #contact-form,
   #contact #contact-details {
@@ -511,9 +607,6 @@ body {
   #header-panel #image {
     height: 14rem;
     width: 100%;
-  }
-  #about-me {
-    padding-top: 1.5rem;
   }
   #contact #contact-details .socials {
     padding: 0.8rem;
