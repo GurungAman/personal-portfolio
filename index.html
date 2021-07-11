@@ -346,7 +346,7 @@
             <div class="row mt-5">
                 <!-- Start contact Form -->
                 <div class="col-md-6 mb-3 mb-md-0" data-aos="fade-up-right" data-aos-duration="800" id="contact-form">
-                    <form action="#">
+                    <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
                         <h3 class="text-center mb-4">Get in touch</h3>
                         <div class="row form-group">
                             <div class="col-md-12 col-lg-6 mb-3 mb-md-0">
@@ -376,6 +376,7 @@
                                 <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your message here . . ."></textarea>
                             </div>
                         </div>
+                        <div data-netlify-recaptcha="true"></div>
                         <div class="row form-group">
                             <div class="col-md-12">
                                 <input type="submit" id="send-message" value="Send Message" class="btn" />
