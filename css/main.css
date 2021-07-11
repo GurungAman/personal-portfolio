@@ -74,14 +74,18 @@ body {
   border-bottom: solid black;
 }
 
-#primary-navbar ul > .nav-link {
-  padding: 0.6rem 1.5rem;
+#primary-navbar .active:active {
+  background-color: rebeccapurple;
+}
+
+#primary-navbar .nav-link {
+  padding: 0.5rem 1.4rem;
   font-size: 1.15rem;
   color: #2e2b12;
   font-weight: 500;
 }
 
-#primary-navbar ul > .nav-link:hover {
+#primary-navbar .nav-link:hover {
   border: none;
   background: -webkit-gradient(linear, left top, right top, from(#94cec9), color-stop(51%, #74cac9), to(#93b0d3));
   background: linear-gradient(to right, #94cec9 0%, #74cac9 51%, #93b0d3 100%);
@@ -100,7 +104,7 @@ body {
 
 #primary-navbar .hover-effect {
   text-decoration: none;
-  padding: 0.6rem 1.5rem;
+  padding: 0.5rem 1.4rem;
   font-size: 1.15rem;
   color: #2e2b12;
   font-weight: 500;
@@ -244,6 +248,13 @@ body {
   width: 100%;
 }
 
+#header-panel #image img {
+  border-radius: 11px;
+  background: #e0e0e0;
+  -webkit-box-shadow: -15px 7px 20px 0px #797979;
+          box-shadow: -15px 7px 20px 0px #797979;
+}
+
 #about-me {
   padding-top: 5rem;
 }
@@ -283,9 +294,9 @@ body {
 
 #projects .project-content {
   position: relative;
-  width: 18rem;
+  width: 24rem;
   height: auto;
-  max-width: 18rem;
+  max-width: 25rem;
   margin: auto;
   overflow: hidden;
   cursor: pointer;
@@ -358,6 +369,12 @@ body {
 #projects .project-content .content-details-lg-screen .project-buttons {
   font-size: 0.8rem;
   margin-top: 0.6rem;
+}
+
+#projects .no-bg {
+  max-width: 22rem;
+  width: 19rem;
+  height: auto;
 }
 
 #contact {
@@ -501,10 +518,8 @@ body {
     -webkit-box-shadow: -26px 26px 51px #646464;
             box-shadow: -26px 26px 51px #646464;
   }
-  #primary-navbar ul > a > li:hover {
-    background: none;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+  #primary-navbar .active {
+    border: none;
   }
   #primary-navbar .navbar-nav > .nav-link:hover {
     background: -webkit-gradient(linear, left top, right top, from(#b5d5d2), color-stop(51%, #a0cfce), to(#a5c1e4));
@@ -531,6 +546,9 @@ body {
     padding-top: 5rem;
     height: 30rem;
   }
+  #about-me {
+    padding: 3rem;
+  }
   #about-me #logos .nginx,
   #about-me #logos .django,
   #about-me #logos .drf,
@@ -542,9 +560,12 @@ body {
     width: auto;
     margin: 1rem auto;
   }
+  #projects {
+    padding: 3rem;
+  }
   #projects .project-content {
-    width: 16rem;
-    height: 20rem;
+    width: 18rem;
+    height: 18rem;
   }
   #projects .project-content .content-overlay {
     display: none;
@@ -558,11 +579,17 @@ body {
   #projects .project-content .content-details {
     display: none;
   }
-  #projects .project-content .content-image {
-    width: 90%;
-  }
   #projects .project-content .content-details-lg-screen {
     display: block;
+  }
+  #projects .no-bg {
+    max-width: 22rem;
+    width: 14rem;
+    height: 18rem;
+  }
+  #contact {
+    padding: 3rem;
+    margin-top: 1rem;
   }
   #contact #contact-form,
   #contact #contact-details {

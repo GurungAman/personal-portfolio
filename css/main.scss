@@ -61,9 +61,12 @@ body {
     .active {
         border-top: solid rgb(0, 0, 0);
         border-bottom: solid rgb(0, 0, 0);
+        &:active {
+            background-color: rebeccapurple;
+        }
     }
-    ul>.nav-link {
-        padding: 0.6rem 1.5rem;
+    .nav-link {
+        padding: 0.5rem 1.4rem;
         font-size: 1.15rem;
         color: #2e2b12;
         font-weight: 500;
@@ -80,7 +83,7 @@ body {
     }
     .hover-effect {
         text-decoration: none;
-        padding: 0.6rem 1.5rem;
+        padding: 0.5rem 1.4rem;
         font-size: 1.15rem;
         color: #2e2b12;
         font-weight: 500;
@@ -162,6 +165,11 @@ body {
     #image {
         height: 20rem;
         width: 100%;
+        img {
+            border-radius: 11px;
+            background: #e0e0e0;
+            box-shadow: -15px 7px 20px 0px #797979;
+        }
     }
 }
 
@@ -201,9 +209,9 @@ body {
     padding-top: 5rem;
     .project-content {
         position: relative;
-        width: 18rem;
+        width: 24rem;
         height: auto;
-        max-width: 18rem;
+        max-width: 25rem;
         margin: auto;
         overflow: hidden;
         cursor: pointer;
@@ -273,6 +281,12 @@ body {
                 margin-top: 0.6rem;
             }
         }
+    }
+    // smaller baakground with no project image
+    .no-bg {
+        max-width: 22rem;
+        width: 19rem;
+        height: auto;
     }
 }
 
@@ -397,11 +411,8 @@ body {
             border-radius: 1.5rem;
             box-shadow: -26px 26px 51px #646464;
         }
-        ul>a>li {
-            &:hover {
-                background: none;
-                box-shadow: none;
-            }
+        .active {
+            border: none;
         }
         .navbar-nav>.nav-link {
             &:hover {
@@ -430,6 +441,7 @@ body {
         height: 30rem;
     }
     #about-me {
+        padding: 3rem;
         #logos {
             .nginx,
             .django,
@@ -445,9 +457,10 @@ body {
         }
     }
     #projects {
+        padding: 3rem;
         .project-content {
-            width: 16rem;
-            height: 20rem;
+            width: 18rem;
+            height: 18rem;
             .content-overlay {
                 display: none;
             }
@@ -462,15 +475,19 @@ body {
             .content-details {
                 display: none;
             }
-            .content-image {
-                width: 90%;
-            }
             .content-details-lg-screen {
                 display: block;
             }
         }
+        .no-bg {
+            max-width: 22rem;
+            width: 14rem;
+            height: 18rem;
+        }
     }
     #contact {
+        padding: 3rem;
+        margin-top: 1rem;
         #contact-form,
         #contact-details {
             padding: 2rem;
