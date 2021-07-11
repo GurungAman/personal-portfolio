@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/effects.css" />
     <!-- Import Fonts -->
@@ -18,12 +20,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400&display=swap" rel="stylesheet" />
 
     <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap" rel="stylesheet" />
-    <title>Portfolio</title>
+    <title mb-3>Portfolio</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#primary-navbar">
     <div id="primary-navbar" class="container-fluid">
         <nav class="navbar navbar-expand-lg">
+
             <a class="navbar-brand" href="#">
                 <img src="/images/brand.png" id="brand-logo" alt="" srcset="" />
             </a>
@@ -33,19 +36,19 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <a class="nav-link" id="hover-effect" href="#">
+                    <a class="nav-link" href="#">
                         <li class="nav-item text-center">Home</li>
                     </a>
 
-                    <a class="nav-link" id="hover-effect" href="#about-me">
+                    <a class="nav-link" href="#about-me">
                         <li class="nav-item text-center">About Me</li>
                     </a>
 
-                    <a class="nav-link" id="hover-effect" href="#projects">
+                    <a class="nav-link" href="#projects">
                         <li class="nav-item text-center">Projects</li>
                     </a>
 
-                    <a class="nav-link" id="hover-effect" href="#contact">
+                    <a class="nav-link" href="#contact">
                         <li class="nav-item text-center">Contact</li>
                     </a>
                 </ul>
@@ -211,24 +214,22 @@
 
             <div class="row mt-4 text-center">
                 <div class="col-12 col-md-6">
-                    <h3 class="title">Text fadeIn bottom</h3>
+                    <h4 class="title mb-3">A real-time chat application</h4>
                     <div class="project-content">
                         <div class="content-overlay"></div>
-                        <img class="content-image" src="/images/project-bg1.png" />
+                        <img class="content-image" src="/images/project-images/project-bg.png" />
 
                         <!-- start content-details for large screen and above -->
                         <div class="content-details fadeIn-bottom ">
                             <h5>Technologies Used:</h4>
                                 <div class="my-2">
-                                    <span>django</span>
-                                    <span>bootstrap</span>
-                                    <span>jquery</span>
+                                    Django, Django-channels, javaScript, jQuery
                                 </div>
                                 <div class="py-3">
                                     <a href="#" rel="noopener noreferrer">
                                         <i class="fab fa-github fa-lg"></i> Source Code</a>
-                                    <a href="#" rel="noopener noreferrer">
-                                        <i class="fas fa-eye"></i> Live demo</a>
+                                    <!-- <a href="#" rel="noopener noreferrer">
+                                        <i class="fas fa-eye"></i> Live demo</a> -->
                                 </div>
                         </div>
                         <!-- end content-details for large screen and above -->
@@ -238,16 +239,13 @@
                         <div class="content-details-lg-screen">
                             <h5>Technologies Used:</h4>
                                 <div class="my-2">
-                                    <span>django</span>
-                                    <span>bootstrap</span>
-                                    <span>jquery</span>
-
+                                    Django, Django-channels, javaScript, jQuery
                                 </div>
                                 <div class="project-buttons">
                                     <a href="#" rel="noopener noreferrer">
                                         <i class="fab fa-github fa-lg"></i> Source Code</a>
-                                    <a href="#" rel="noopener noreferrer">
-                                        <i class="fas fa-eye"></i> Live demo</a>
+                                    <!-- <a href="#" rel="noopener noreferrer">
+                                        <i class="fas fa-eye"></i> Live demo</a> -->
                                 </div>
                         </div>
                         <!-- end content-details for large screen and down -->
@@ -256,25 +254,22 @@
                 </div>
 
                 <div class="col-12 col-md-6 mt-4 mt-md-0">
-                    <h3 class="title">Text fadeIn bottom</h3>
+                    <h4 class="title mb-3">Movie recommendation web-app</h4>
                     <div class="project-content">
                         <div class="content-overlay"></div>
-                        <img class="content-image" src="/images/project-bg.png" />
+                        <img class="content-image" src="/images/project-images/project-bg.png" />
 
                         <!-- start content-details for large screen and above -->
 
                         <div class="content-details fadeIn-bottom ">
                             <h5>Technologies Used:</h4>
                                 <div class="my-2">
-                                    <span>django</span>
-                                    <span>bootstrap</span>
-                                    <span>jquery</span>
+                                    Django, Bootstrap, jQuery
                                 </div>
                                 <div class="py-3">
                                     <a href="#" rel="noopener noreferrer">
                                         <i class="fab fa-github fa-lg"></i> Source Code</a>
-                                    <a href="#" rel="noopener noreferrer">
-                                        <i class="fas fa-eye"></i> Live demo</a>
+
                                 </div>
                         </div>
                         <!-- end content-details for large screen and above -->
@@ -284,15 +279,12 @@
                         <div class="content-details-lg-screen">
                             <h5>Technologies Used:</h4>
                                 <div class="my-2">
-                                    <span>django</span>
-                                    <span>bootstrap</span>
-                                    <span>jquery</span>
+                                    Django, Bootstrap, jQuery
                                 </div>
                                 <div class="project-buttons">
                                     <a href="#" rel="noopener noreferrer">
                                         <i class="fab fa-github fa-lg"></i> Source Code</a>
-                                    <a href="#" rel="noopener noreferrer">
-                                        <i class="fas fa-eye"></i> Live demo</a>
+
                                 </div>
                         </div>
                         <!-- end content-details for large screen and down -->
@@ -303,24 +295,21 @@
 
             <div class="row mt-4">
                 <div class="col-12 text-center">
-                    <h3 class="title">Text fadeIn bottom</h3>
+                    <h3 class="title mb-3">A web scraper</h3>
                     <div class="project-content">
                         <div class="content-overlay"></div>
-                        <img class="content-image" src="/images/project-bg1.png" />
+                        <img class="content-image" src="/images/project-images/project-bg.png" />
 
                         <!-- start content-details for large screen and above -->
 
                         <div class="content-details fadeIn-bottom">
                             <h5>Technologies Used:</h5>
                             <div class="my-2">
-                                <span>django</span>
-                                <span>bootstrap</span>
-                                <span>jquery</span>
+                                Django, Selenium, jQuery
                                 <div class="py-3">
                                     <a href="#" rel="noopener noreferrer">
                                         <i class="fab fa-github fa-lg"></i> Source Code</a>
-                                    <a href="#" rel="noopener noreferrer">
-                                        <i class="fas fa-eye"></i> Live demo</a>
+
                                 </div>
                             </div>
                         </div>
@@ -332,16 +321,13 @@
                         <div class="content-details-lg-screen">
                             <h5>Technologies Used:</h4>
                                 <div class="my-2">
-                                    <span>django</span>
-                                    <span>bootstrap</span>
-                                    <span>jquery</span>
+                                    Django, Selenium, jQuery
 
                                 </div>
                                 <div class="project-buttons">
                                     <a href="#" rel="noopener noreferrer">
                                         <i class="fab fa-github fa-lg"></i> Source Code</a>
-                                    <a href="#" rel="noopener noreferrer">
-                                        <i class="fas fa-eye"></i> Live demo</a>
+
                                 </div>
                         </div>
                         <!-- end content-details for large screen and down -->
@@ -501,6 +487,7 @@
     </script>
     <script src="/js/main.js"></script>
     <script src="/js/text-animation.js"></script>
+
 </body>
 
 </html>

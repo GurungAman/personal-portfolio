@@ -11,6 +11,7 @@ body {
     background-color: rgba(240, 235, 235, 0.822);
     font-family: $primary-font;
     overflow-x: hidden;
+    position: relative;
 }
 
 #back-to-top {
@@ -57,12 +58,17 @@ body {
             height: 3.5rem;
         }
     }
+    .active {
+        border-top: solid rgb(0, 0, 0);
+        border-bottom: solid rgb(0, 0, 0);
+    }
     ul>.nav-link {
         padding: 0.6rem 1.5rem;
         font-size: 1.15rem;
         color: #2e2b12;
         font-weight: 500;
         &:hover {
+            border: none;
             background: linear-gradient( to right, #94cec9 0%, #74cac9 51%, rgb(147, 176, 211) 100%);
             opacity: 0.7;
             box-shadow: -16px 12px 20px 3px #0f967f;
@@ -79,6 +85,7 @@ body {
         color: #2e2b12;
         font-weight: 500;
         &:hover {
+            border: none;
             background: black;
             opacity: 0.7;
             box-shadow: -9px 9px 16px 2px #797979f6;
@@ -526,7 +533,6 @@ body {
             width: 100%;
         }
     }
-    #about-me {}
     #contact {
         #contact-details {
             .socials {
