@@ -81,6 +81,9 @@ body {
             color: #1f1c03;
         }
     }
+    .empty-column {
+        display: none;
+    }
     .hover-effect {
         text-decoration: none;
         padding: 0.5rem 1.4rem;
@@ -97,17 +100,6 @@ body {
             transform: translateY(-4px);
             color: #ffffff;
         }
-    }
-    .navbar-toggler {
-        color: #ffffff;
-        background-color: transparent;
-        background-image: url("../images/breadcrumb.svg");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        background-position: center;
-        overflow: hidden;
-        justify-content: center;
-        align-items: center;
     }
 }
 
@@ -188,20 +180,22 @@ body {
         @extend %button-resume;
     }
     #logos {
-        .nginx {
-            height: 3rem;
-        }
         img {
             height: 4rem;
             width: auto;
             margin: 1rem auto;
+            max-width: 100%;
         }
     }
     .content {
+        padding: 0 3rem;
         font-family: $secondary-font;
         line-height: 1.5;
         font-size: 1.2rem;
         letter-spacing: 0.15rem;
+        .about-me-content {
+            text-align: justify;
+        }
     }
 }
 
@@ -318,12 +312,11 @@ body {
         }
     }
     #contact-details {
-        .marker {
-            background-color: #2e2b12;
-            color: #ffffff;
-            border-radius: 50%;
-            height: 2rem;
-            width: auto;
+        .contact {
+            color: #000000;
+            &:hover {
+                color: #3b957d;
+            }
         }
         .socials {
             color: #000000e0;
@@ -335,6 +328,12 @@ body {
                 transition: transform 0.3s;
                 transform: translateY(-5px);
                 box-shadow: 7px 15px 16px #7c7b7b;
+            }
+        }
+        .socials-wrapper {
+            justify-content: space-around;
+            .socials {
+                max-width: 25%;
             }
         }
     }
@@ -406,10 +405,89 @@ body {
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
     #primary-navbar {
+        .empty-column {
+            display: block;
+            height: 3.5rem;
+        }
         .navbar-collapse {
             background: #fafafa;
             border-radius: 1.5rem;
             box-shadow: -26px 26px 51px #646464;
+            position: absolute;
+            top: 0.5rem;
+            left: 3rem;
+            max-width: 90%;
+            width: 90%;
+        }
+        .animated-icon {
+            z-index: 99999;
+            width: 2.3rem;
+            height: 1.7rem;
+            position: absolute;
+            top: 1.9rem;
+            right: 3.5rem;
+            margin: 0px;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: 0.3s ease-in-out;
+            -moz-transition: 0.3s ease-in-out;
+            -o-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+            span {
+                display: block;
+                position: absolute;
+                height: 3px;
+                width: 100%;
+                border-radius: 9px;
+                opacity: 1;
+                left: 0;
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+                -webkit-transition: 0.25s ease-in-out;
+                -moz-transition: 0.25s ease-in-out;
+                -o-transition: 0.25s ease-in-out;
+                transition: 0.25s ease-in-out;
+                background: #000000;
+                &:nth-child(1) {
+                    top: 0px;
+                }
+                &:nth-child(2),
+                &:nth-child(3) {
+                    top: 10px;
+                }
+                &:nth-child(4) {
+                    top: 20px;
+                }
+            }
+            &.open span {
+                &:nth-child(1) {
+                    top: 11px;
+                    width: 0%;
+                    left: 50%;
+                }
+                &:nth-child(2) {
+                    -webkit-transform: rotate(45deg);
+                    -moz-transform: rotate(45deg);
+                    -o-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+                &:nth-child(3) {
+                    -webkit-transform: rotate(-45deg);
+                    -moz-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                }
+                &:nth-child(4) {
+                    top: 11px;
+                    width: 0%;
+                    left: 50%;
+                }
+            }
         }
         .active {
             border: none;
@@ -424,12 +502,12 @@ body {
                 transform: translateY(-4px);
                 color: #000000;
             }
-            &:nth-child(1) {
-                &:hover {
-                    border-radius: 1.5rem 1.5rem 0 0;
-                }
-            }
-            &:nth-child(4) {
+            // &:nth-child(1) {
+            //     &:hover {
+            //         border-radius: 1.5rem 1.5rem 0 0;
+            //     }
+            // }
+            &:nth-child(5) {
                 &:hover {
                     border-radius: 0 0 1.5rem 1.5rem;
                 }
@@ -441,10 +519,7 @@ body {
         height: 30rem;
     }
     #about-me {
-        padding: 3rem;
         #logos {
-            .nginx,
-            .django,
             .drf,
             .jquery {
                 height: 3rem;
@@ -455,9 +530,11 @@ body {
                 margin: 1rem auto;
             }
         }
+        .content {
+            padding: 0 2rem;
+        }
     }
     #projects {
-        padding: 3rem;
         .project-content {
             width: 18rem;
             height: 18rem;
@@ -486,11 +563,11 @@ body {
         }
     }
     #contact {
-        padding: 3rem;
+        padding: 3rem 0;
         margin-top: 1rem;
         #contact-form,
         #contact-details {
-            padding: 2rem;
+            padding: 1rem;
         }
         #contact-details {
             .socials {
@@ -504,28 +581,78 @@ body {
 /* X-Small devices (portrait phones, less than 768px) */
 
 @media (max-width: 767.98px) {
+    #primary-navbar {
+        .navbar-collapse {
+            left: 2.5rem;
+            width: 90%;
+        }
+        .navbar {
+            padding: 0.2rem 0.7rem;
+        }
+        .navbar-brand #brand-logo {
+            height: 2.8rem;
+        }
+        .animated-icon {
+            top: 1.4rem;
+        }
+    }
     #header-panel {
+        height: 25rem;
+        .container {
+            max-width: 100%;
+            padding: 0 3rem;
+        }
         .h1 {
-            font-size: 1.8rem;
+            font-size: 1.7rem;
         }
         .h4 {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
         }
         #image {
-            height: 14rem;
+            height: 13rem;
             width: 100%;
+        }
+        #about-me-btn {
+            padding: 0.5rem 1.8rem;
         }
     }
     #about-me {
+        padding: 3rem 0 0 0;
+        font-size: 1rem;
+        .h1 {
+            font-size: 2rem;
+        }
+        .h3 {
+            font-size: 1.75rem;
+        }
+        .content {
+            font-size: 1.1rem;
+        }
         #content-about-me {
             flex-direction: column-reverse;
         }
     }
+    #projects {
+        font-size: 1rem;
+        h1 {
+            font-size: 2rem;
+        }
+    }
     #contact {
         padding-bottom: 0;
+        font-size: 1rem;
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.7rem;
+        }
+        .font-weight-bold {
+            font-size: 1.15rem;
+        }
         #contact-form,
         #contact-details {
-            padding: 3rem;
+            padding: 1.5rem;
         }
         #contact-details {
             .socials {
@@ -538,23 +665,56 @@ body {
 // X-Small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
     #primary-navbar {
+        .navbar-collapse {
+            left: 1.6rem;
+            width: 90%;
+        }
         .navbar {
             padding: 0 1rem 0;
-            justify-content: space-around;
+            justify-content: space-between;
+        }
+        .animated-icon {
+            top: 1.1rem;
+            right: 1.8rem;
         }
     }
     #header-panel {
-        height: 40rem;
+        height: 38rem;
         #image {
             height: 14rem;
             width: 100%;
         }
     }
+    #about-me {
+        .content {
+            padding: 0 2rem;
+            .about-me-content {
+                text-align: left;
+            }
+        }
+    }
     #contact {
+        padding: 0;
         #contact-details {
             .socials {
-                padding: 0.8rem;
+                padding: 0.5rem;
+                &:hover {
+                    border-radius: 1rem;
+                }
             }
+        }
+        .socials-wrapper {
+            .socials {
+                i {
+                    font-size: 2.3rem;
+                }
+            }
+        }
+    }
+    #footer {
+        padding: 0.25rem 0;
+        i {
+            font-size: 1.1rem;
         }
     }
 }

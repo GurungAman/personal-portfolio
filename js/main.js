@@ -33,12 +33,6 @@ $(function() {
     });
 });
 
-// close navbar-collapse on click on any part of screen 
-$(document).click(function(event) {
-    if (!$(event.target).is(".navbar-collapse *")) {
-        $(".navbar-collapse").collapse("hide");
-    }
-});
 
 
 // remove hashes from url
@@ -61,5 +55,24 @@ $(document).ready(function() {
             document.title,
             window.location.origin + window.location.pathname + window.location.search
         );
+    }
+});
+
+// navbar hamburger menu toggler
+$(document).ready(function() {
+
+    $('.navbar-toggler').on('click', function() {
+
+        $('.animated-icon').toggleClass('open');
+    });
+
+});
+
+
+$(window).on('load', function() {
+    if ($('#preloader').length) {
+        $('#preloader').delay(100).fadeOut('fast', function() {
+            $(this).remove();
+        });
     }
 });
