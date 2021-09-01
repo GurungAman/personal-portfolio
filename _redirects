@@ -2,5 +2,5 @@
 http://amangurung.com https://www.amangurung.com.np/
 https://amangurung.com https://www.amangurung.com.np/
 
-http://amangurung.com/* https://www.amangurung.com.np/:splat 301!
-https://amangurung.com/* https://www.amangurung.com.np/:splat 301!
+http://amangurung.com/* https://www.amangurung.com.np/
+https://amangurung.com/* https://www.amangurung.com.np/
