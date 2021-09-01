@@ -1,4 +1,7 @@
 # /* /index.html 200
-# redirect to .n
+# redirect to .np
 http://amangurung.com/* https://www.amangurung.com.np/
 https://amangurung.com/* https://www.amangurung.com.np/
+
+http://amangurung.com/ https://www.amangurung.com.np/
+https://amangurung.com/ https://www.amangurung.com.np/
