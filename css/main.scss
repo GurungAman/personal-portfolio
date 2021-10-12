@@ -225,6 +225,10 @@ body {
             -moz-transition: all 0.4s ease-in-out 0s;
             transition: all 0.4s ease-in-out 0s;
         }
+        .no-border-radius{
+            border-radius: 0rem;
+
+        }
         &:hover {
             .content-details {
                 top: 50%;
