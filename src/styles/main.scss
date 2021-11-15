@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400&display=swap");
+@import "~bootstrap/scss/bootstrap";
+
+$primary-font: "Montserrat", "sans-serif";
+$secondary-font: "Titillium Web", "sans-serif";
+
+html {
+  scroll-behavior: smooth;
+  // overflow-x: hidden;
+}
+
+body {
+  background-color: rgba(240, 235, 235, 0.822);
+  font-family: $primary-font;
+  overflow-x: hidden;
+  position: relative;
+}
+a {
+  text-decoration: none;
+}
+p {
+  font-family: $secondary-font;
+}
+#back-to-top {
+  background-color: #0f967f;
+  color: #ffffff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: none;
+  &:hover {
+    transition: transform 0.3s;
+    transform: translateY(-5px);
+    box-shadow: -13px 14px 8px #6a6c6994;
+  }
+}

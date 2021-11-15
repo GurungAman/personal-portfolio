@@ -1,0 +1,67 @@
+.about-me {
+  height: 90rem;
+  padding-top: 5rem;
+  .text-carousel {
+    letter-spacing: 0.15rem;
+
+    .flash {
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      text-decoration: underline;
+
+      animation-name: blinker;
+      animation-duration: 0.7s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      @keyframes blinker {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .logo {
+    margin: 1rem auto;
+    img {
+      object-fit: contain !important;
+    }
+  }
+  .content {
+    padding: 0 3rem;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+    p {
+      text-align: justify;
+    }
+    .resume-btn {
+      color: #0034dd;
+      padding: 0.5rem 2.5rem;
+      border-radius: 56px;
+      box-shadow: -4px 11px 20px 4px #7d9190;
+      background: rgb(224, 235, 239);
+      background: linear-gradient(
+        153deg,
+        rgba(224, 235, 239, 1) 0%,
+        rgba(255, 255, 255, 0.9847101790181706) 46%,
+        rgba(167, 204, 232, 1) 100%
+      );
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  #about-me {
+    .content {
+      p {
+        text-align: left;
+      }
+    }
+  }
+}

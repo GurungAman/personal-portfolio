@@ -4,6 +4,7 @@ module.exports = {
     title: "personal-portfolio",
   },
   plugins: [
+    "gatsby-plugin-styled-components",
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
@@ -12,9 +13,16 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: `${__dirname}/src/images/`,
       },
       __key: "images",
+    },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -50,
+        duration: 200,
+      },
     },
   ],
 };
