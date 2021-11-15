@@ -25,7 +25,7 @@ const LeftHeaderPanel = () => {
       <Row className='mt-1 mt-lg-4'>
         <Col xs={12} lg={5} className='my-3 mt-lg-0 hvr-shrink'>
           <AnchorLink
-            to='#about-me'
+            to='/#aboutMe'
             key='about-me'
             title='About me'
             className={`${styles.aboutMeBtn} text-center text-sm-left`}

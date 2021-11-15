@@ -16,15 +16,15 @@ const items = [
   },
   {
     name: "About Me",
-    path: "#aboutMe",
+    path: "/#aboutMe",
   },
   {
     name: "Projects",
-    path: "#projects",
+    path: "/#projects",
   },
   {
     name: "Contact",
-    path: "#contact",
+    path: "/#contact",
   },
 ];
 
@@ -49,10 +49,9 @@ const NavBar = () => {
   const image = data.file.childImageSharp.gatsbyImageData;
 
   const navItems = items.map(({ name, path }) => {
-    console.log(path);
     return (
       <AnchorLink
-        to={`/${path}`}
+        to={path}
         key={name}
         title={name}
         stripHash
@@ -68,7 +67,7 @@ const NavBar = () => {
       <Container fluid>
         <Navbar.Brand>
           <AnchorLink
-            to='/'
+            to=' '
             key='brand-logo'
             stripHash
             className={styles.brand}
@@ -76,7 +75,6 @@ const NavBar = () => {
             <GatsbyImage
               image={image}
               alt={"Brand Logo"}
-              className={styles.profilePicture}
             />
           </AnchorLink>
         </Navbar.Brand>

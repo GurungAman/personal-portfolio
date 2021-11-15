@@ -1,0 +1,28 @@
+.footer {
+  background: #000000;
+  color: #ffffff;
+  padding: 1.25rem 0 0.5rem 0;
+  .copyright {
+    color: #ffffff;
+    display: inline-block;
+    &:hover {
+      transition: transform 0.3s;
+      transform: translateY(-4px);
+      box-shadow: 8px 8px 13px #6e6e6e67;
+    }
+  }
+  span{
+      margin: 0.5rem 1.2rem;
+  }
+  .socials {
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 0.5rem;
+    display: inline-block;
+    &:hover {
+      transition: transform 0.3s;
+      transform: translateY(-6px);
+      box-shadow: 8px 8px 13px #464b44;
+    }
+  }
+}

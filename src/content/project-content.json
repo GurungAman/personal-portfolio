@@ -1,0 +1,39 @@
+{
+  "projects": [
+    {
+      "title": "Khaja-khaja",
+      "techUsed": "Django Rest Framework, Celery",
+      "description": "API for a restaurant management system ",
+      "projectLink": "https://github.com/GurungAman/Khaja-khaja",
+      "image": "khaja-khaja"
+    },
+    {
+      "title": "A real-time chat application",
+      "techUsed": "Django, Django-channels, javaScript, jQuery",
+      "description": "A chat application made with django channels.",
+      "projectLink": "https://github.com/GurungAman/Chat-App",
+      "image": "chat-app"
+    },
+    {
+      "title": "Movie recommendation web-app",
+      "techUsed": "Django, Bootstrap, jQuery",
+      "description": "An application that recommends movies based on your likings. ",
+      "projectLink": "https://github.com/GurungAman/Movie-Recommendation-Web-app",
+      "image": "movie-rec"
+    },
+    {
+      "title": "Web scraper",
+      "techUsed": "Django, Selenium",
+      "description": "A web scraper that scrapes links, images, css, js files from a web-site. ",
+      "projectLink": "https://github.com/GurungAman/Scraping",
+      "image": ""
+    },
+    {
+      "title": "Spotify Playlist converter",
+      "techUsed": "Python, SpotifyAPI, YoutubeAPI",
+      "description": "Move your spotify playlist to YouTube. ",
+      "projectLink": "https://github.com/GurungAman/spotify-playlist-converter",
+      "image": ""
+    }
+  ]
+}

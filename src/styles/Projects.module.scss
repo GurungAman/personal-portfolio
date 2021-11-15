@@ -1,0 +1,47 @@
+.projects {
+  padding-top: 5rem;
+  .card {
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-color: rgb(255, 255, 255);
+    margin: 1.5rem 0.7rem 0;
+    &:not(:last-child),
+    &:not(:first-child) {
+      border: solid #646868cc;
+      border-radius: 20px;
+    }
+    max-width: 30%;
+    box-shadow: -1px 16px 12px 8px #dbe2d9;
+
+    img {
+      height: 9.5rem;
+      width: auto;
+    }
+    .sourceCodeLink {
+      display: inline;
+      background: #000000;
+      color: #ffffff;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+    .projects {
+    .card {
+      max-width: 45%;
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  .projects {
+    .card {
+      margin: 2rem auto;
+      width: 80%;
+      max-width: 80%;
+    }
+  }
+}

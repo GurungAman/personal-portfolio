@@ -58,9 +58,9 @@ const TechnicalSkills = () => {
 const AboutMeContent = () => {
   return (
     <Col xs={12} md={6} className={`mt-3 mt-sm-0 ${styles.content}`}>
-      <p>
-        <h1 className='text-center mb-4'>Hello.!</h1>
-      </p>
+      <h1>
+        <p className='text-center mb-4'>Hello.!</p>
+      </h1>
       <p>My name is Aman Gurung.</p>
       <p>Based in Pokhara, Nepal</p>
       <p>
@@ -80,6 +80,7 @@ const AboutMeContent = () => {
           href='https://drive.google.com/file/d/136ZfYjWclzKhHT8ROkBND0MEQI5FApmP/view?usp=sharing'
           className={`btn hvr-shrink ${styles.resumeBtn}`}
           target='_blank'
+          rel='noreferrer'
         >
           View Resume
         </a>
@@ -88,22 +89,12 @@ const AboutMeContent = () => {
   );
 };
 
-//  typeSpeed: 80,
-//   backSpeed: 40,
-//   backDelay: 1000
-
 export default function AboutMe() {
-  const phrases = [
-    "A Developer.",
-    "CSIT Student.",
-    "Tech enthusiast.",
-    "An avid gamer.",
-  ];
   const [typing, setTyping] = React.useState(true);
   const infiniteTyping = () => {
     setTyping(false);
     setTyping(true);
-  }
+  };
   return (
     <section className={styles.aboutMe} id='aboutMe'>
       <Container>
