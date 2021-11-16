@@ -12,7 +12,7 @@ import * as styles from "../styles/NavBar.module.scss";
 const items = [
   {
     name: "Home",
-    path: " ",
+    path: "/#home",
   },
   {
     name: "About Me",
@@ -81,7 +81,7 @@ const NavBar = () => {
       <Container fluid>
         <Navbar.Brand>
           <AnchorLink
-            to=' '
+            to='/#home'
             key='brand-logo'
             stripHash
             className={styles.brand}

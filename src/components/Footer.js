@@ -30,7 +30,7 @@ export default function Footer() {
         <div>
           <FontAwesomeIcon icon={faCopyright} size='lg' />
           Developed by{" "}
-          <AnchorLink to=' ' stripHash className={styles.copyright}>
+          <AnchorLink to='/#home' stripHash className={styles.copyright}>
             {" "}
             Aman Gurung
           </AnchorLink>
@@ -80,7 +80,7 @@ export default function Footer() {
           </span>
         </div>
       </Row>
-      <AnchorLink to='/' className={hideBtn ?  "d-none": "back-to-top"}>
+      <AnchorLink to='/#home' className={hideBtn ? "d-none" : "back-to-top"}>
         {" "}
         <FontAwesomeIcon icon={faAngleUp} />
       </AnchorLink>

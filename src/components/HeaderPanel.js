@@ -64,7 +64,7 @@ const RightHeaderPanel = () => {
 
 export default function HeaderPanel() {
   return (
-    <section className={styles.headerPanel}>
+    <section className={styles.headerPanel} id='home'>
       <Container>
         <Row>
           <LeftHeaderPanel />
