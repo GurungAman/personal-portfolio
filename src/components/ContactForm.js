@@ -13,10 +13,11 @@ export default function ContactForm() {
       data-aos-duration='700'
     >
       <Form
-        name='contact-form mb-md-0'
+        name='contact'
         method='POST'
-        data-netlify-recaptcha='true'
         data-netlify='true'
+        data-netlify-recaptcha='true'
+        data-netlify-honeypot='bot-field'
       >
         <input type='hidden' name='bot-field' />
         <input type='hidden' name='form-name' value='contact' />
@@ -67,7 +68,12 @@ export default function ContactForm() {
         />
         <Form.Group as={Row} className='mt-3 mb-3'>
           <Col md={12}>
-            <Button className={styles.sendMessage}> Send Message</Button>{" "}
+            <Button
+              as='input'
+              type='submit'
+              className={styles.sendMessage}
+              value='Send Message'
+            />{" "}
           </Col>
         </Form.Group>
       </Form>{" "}
