@@ -15,6 +15,7 @@ export default function ContactForm() {
       <Form
         name='contact'
         method='POST'
+        onSubmit='submit'
         data-netlify='true'
         data-netlify-recaptcha='true'
         data-netlify-honeypot='bot-field'
@@ -25,23 +26,43 @@ export default function ContactForm() {
         <Form.Group as={Row} className='mb-3'>
           <Col md={12} lg={6} className='mb-3 mb-md-0'>
             <Form.Label htmlFor='firstName'>First Name</Form.Label>
-            <Form.Control type='text' id='firstName' placeholder='First Name' />
+            <Form.Control
+              type='text'
+              name='first-name'
+              id='firstName'
+              placeholder='First Name'
+            />
           </Col>
           <Col md={12} lg={6}>
             <Form.Label htmlFor='lastName'>Last Name</Form.Label>
-            <Form.Control type='text' id='lastName' placeholder='Last Name' />
+            <Form.Control
+              type='text'
+              name='last-name'
+              id='lastName'
+              placeholder='Last Name'
+            />
           </Col>
         </Form.Group>
         <Form.Group as={Row} className='mb-3'>
           <Col md={12}>
             <Form.Label htmlFor='email'>Email</Form.Label>
-            <Form.Control type='email' id='email' placeholder='Email' />
+            <Form.Control
+              type='email'
+              name='email'
+              id='email'
+              placeholder='Email'
+            />
           </Col>
         </Form.Group>
         <Form.Group as={Row} className='mb-3'>
           <Col md={12}>
             <Form.Label htmlFor='subject'>Subject</Form.Label>
-            <Form.Control type='text' id='subject' placeholder='Subject' />
+            <Form.Control
+              type='text'
+              name='subject'
+              id='subject'
+              placeholder='Subject'
+            />
           </Col>
         </Form.Group>
         <Form.Group as={Row} className='mb-3'>
@@ -49,6 +70,7 @@ export default function ContactForm() {
             <Form.Label htmlFor='message'>Message</Form.Label>
             <Form.Control
               as='textarea'
+              name='message'
               id='message'
               placeholder='Write your message here...'
               rows='7'
