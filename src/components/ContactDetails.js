@@ -16,7 +16,12 @@ import {
 
 export default function ContactDetails() {
   return (
-    <Col md={{ offset: "1", span: "5" }} className={styles.contactDetails}>
+    <Col
+      md={{ offset: "1", span: "5" }}
+      className={styles.contactDetails}
+      data-aos='fade-up-left'
+      data-aos-duration='700'
+    >
       <h2 className='text-center mb-3'>Find Me Here.</h2>
       <div className='p-3 mb-3'>
         <div className='mb-0 font-weight-bold'>

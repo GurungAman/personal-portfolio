@@ -13,7 +13,11 @@ import * as styles from "../styles/Projects.module.scss";
 
 const CardComponent = ({ project, image }) => {
   return (
-    <Card className={styles.card}>
+    <Card
+      className={styles.card}
+      data-aos='zoom-in-down'
+      data-aos-duration='500'
+    >
       <Card.Body className='text-center'>
         <Card.Title>{project.title}</Card.Title>
         <ListGroup variant='flush'>

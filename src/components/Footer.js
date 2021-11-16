@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { Row } from "react-bootstrap";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
@@ -14,6 +14,16 @@ import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import * as styles from "../styles/Footer.module.scss";
 
 export default function Footer() {
+  const [hideBtn, setHideBtn] = useState(true);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        setHideBtn(false);
+      } else {
+        setHideBtn(true);
+      }
+    });
+  }, []);
   return (
     <section className={styles.footer}>
       <Row className='text-center'>
@@ -70,7 +80,7 @@ export default function Footer() {
           </span>
         </div>
       </Row>
-      <AnchorLink to='/' className='back-to-top'>
+      <AnchorLink to='/' className={hideBtn ?  "d-none": "back-to-top"}>
         {" "}
         <FontAwesomeIcon icon={faAngleUp} />
       </AnchorLink>

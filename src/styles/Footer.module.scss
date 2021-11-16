@@ -11,8 +11,8 @@
       box-shadow: 8px 8px 13px #6e6e6e67;
     }
   }
-  span{
-      margin: 0.5rem 1.2rem;
+  span {
+    margin: 0.5rem 1.2rem;
   }
   .socials {
     color: #ffffff;
@@ -24,5 +24,8 @@
       transform: translateY(-6px);
       box-shadow: 8px 8px 13px #464b44;
     }
+  }
+  a:hover {
+    color: #ffffff;
   }
 }

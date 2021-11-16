@@ -9,6 +9,17 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Aman Gurung",
+        short_name: "Aman Grg",
+        start_url: "/",
+        display: "standalone",
+        icon: "src/images/favicon.png",
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {

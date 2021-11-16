@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
 import { GatsbyImage } from "gatsby-plugin-image";
@@ -29,6 +29,16 @@ const items = [
 ];
 
 const NavBar = () => {
+  const [navBarDefault, setNavBarDefault] = useState(true);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 150) {
+        setNavBarDefault(false);
+      } else {
+        setNavBarDefault(true);
+      }
+    });
+  }, []);
   const [isOpen, setOpen] = useState(false);
   const data = useStaticQuery(graphql`
     query brandImageQuery {
@@ -55,7 +65,7 @@ const NavBar = () => {
         key={name}
         title={name}
         stripHash
-        className={styles.navItem}
+        className={navBarDefault ? styles.navItem : styles.hoverEffect}
       >
         {name}
       </AnchorLink>
@@ -63,7 +73,11 @@ const NavBar = () => {
   });
 
   return (
-    <Navbar expand='lg' fixed='top'>
+    <Navbar
+      expand='lg'
+      fixed='top'
+      className={navBarDefault ? "" : styles.scrolledNavbar}
+    >
       <Container fluid>
         <Navbar.Brand>
           <AnchorLink
@@ -72,10 +86,7 @@ const NavBar = () => {
             stripHash
             className={styles.brand}
           >
-            <GatsbyImage
-              image={image}
-              alt={"Brand Logo"}
-            />
+            <GatsbyImage image={image} alt={"Brand Logo"} />
           </AnchorLink>
         </Navbar.Brand>
 

@@ -70,6 +70,8 @@ const AboutMeContent = () => {
       </p>
       <p>A web developer specializing in backend development.</p>
       <p
+        data-aos='zoom-in-up'
+        data-aos-duration='500'
         className='
                 py-4 py-sm-3
                 d-flex

@@ -6,8 +6,20 @@ import * as styles from "../styles/Contact.module.scss";
 
 export default function ContactForm() {
   return (
-    <Col md={6} className={styles.contactForm}>
-      <Form name='contact-form mb-md-0'>
+    <Col
+      md={6}
+      className={styles.contactForm}
+      data-aos='fade-up-right'
+      data-aos-duration='700'
+    >
+      <Form
+        name='contact-form mb-md-0'
+        method='POST'
+        data-netlify-recaptcha='true'
+        data-netlify='true'
+      >
+        <input type='hidden' name='contact-form' value='contact' />
+
         <h2 className='text-center mb-4'>Get in touch</h2>
         <Form.Group as={Row} className='mb-3'>
           <Col md={12} lg={6} className='mb-3 mb-md-0'>
@@ -43,15 +55,17 @@ export default function ContactForm() {
             />
           </Col>
         </Form.Group>
-        {/* <div
+        <div
           data-
           className='mb-3'
           netlify-recaptcha='true'
           style={{
-            transform:
-              "scale(0.80);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;",
+            transform: "scale(0.77)",
+            webkitTransform: "scale(0.77)",
+            transformOrigin: "0 0",
+            webkitTransformOrigin: "0 0",
           }}
-        /> */}
+        />
         <Form.Group as={Row} className='mt-3 mb-3'>
           <Col md={12}>
             <Button className={styles.sendMessage}> Send Message</Button>{" "}
