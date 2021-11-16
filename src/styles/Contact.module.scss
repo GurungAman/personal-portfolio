@@ -1,0 +1,103 @@
+.contact-wrapper {
+  background: rgb(229, 226, 226);
+  background: linear-gradient(168deg, #cadfcc 0%, #cad1ce 48%, #6191b4 100%);
+  margin-top: 3rem;
+  padding: 2rem 0;
+  .contact-form,
+  .contact-details {
+    padding: 3.5rem;
+    background: rgb(251, 251, 251);
+    background: linear-gradient(
+      168deg,
+      rgba(251, 251, 251, 1) 0%,
+      rgba(233, 231, 231, 0.8746487906809604) 44%,
+      rgba(234, 234, 234, 0.9785813749506233) 100%
+    );
+  }
+  .contact-form {
+    .send-message {
+      border: none;
+      color: rgb(255, 255, 255);
+      border-radius: 62px;
+      background: #3a3b3b65;
+      box-shadow: -12px 12px 12px #b3bdae;
+      &:hover {
+        transition: transform 0.3s;
+        transform: translateY(-5px);
+        box-shadow: -6px 12px 16px #7c7b7b;
+      }
+    }
+  }
+
+  .contact-details {
+    .contact {
+      background: none;
+      color: #000000;
+      &:hover {
+        color: #3b957d;
+      }
+    }
+    .socials {
+      color: #000000e0;
+      border-radius: 50%;
+      padding: 1rem;
+      &:hover {
+        background: #74867fc7;
+        color: #ffffff;
+        transition: transform 0.3s;
+        transform: translateY(-5px);
+        box-shadow: 7px 15px 16px #7c7b7b;
+      }
+    }
+    .socials-wrapper {
+      justify-content: space-around;
+      .socials {
+        max-width: 25%;
+      }
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .contact-wrapper {
+    padding: 3rem 0;
+    margin-top: 2rem;
+    .contact-form,
+    .contact-details {
+      padding: 1rem;
+    }
+    .contact-details {
+      .socials {
+        padding: 0.55rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contact-wrapper {
+    padding-bottom: 0;
+    .font-weight-bold {
+      font-size: 1.15rem;
+    }
+    .contact-form,
+    .contact-details {
+      margin-top: 1rem;
+      padding: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .contact-wrapper {
+    padding: 0;
+    .contact-details {
+      .socials {
+        padding: 0.5rem;
+        &:hover {
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+}

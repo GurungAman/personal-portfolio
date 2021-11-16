@@ -22,7 +22,7 @@ a {
 p {
   font-family: $secondary-font;
 }
-#back-to-top {
+.back-to-top {
   background-color: #0f967f;
   color: #ffffff;
   padding: 0.7rem 1.2rem;
@@ -30,7 +30,7 @@ p {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  display: none;
+  // display: none;
   &:hover {
     transition: transform 0.3s;
     transform: translateY(-5px);
