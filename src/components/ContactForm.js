@@ -1,7 +1,6 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import { Col, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
 import * as styles from "../styles/Contact.module.scss";
 
 export default function ContactForm() {
@@ -17,7 +16,6 @@ export default function ContactForm() {
         method='POST'
         onSubmit='submit'
         data-netlify='true'
-        data-netlify-recaptcha='true'
         data-netlify-honeypot='bot-field'
       >
         <input type='hidden' name='bot-field' />
@@ -78,24 +76,12 @@ export default function ContactForm() {
             />
           </Col>
         </Form.Group>
-        <div
-          className='mb-3'
-          data-netlify-recaptcha='true'
-          style={{
-            transform: "scale(0.77)",
-            webkitTransform: "scale(0.77)",
-            transformOrigin: "0 0",
-            webkitTransformOrigin: "0 0",
-          }}
-        />
         <Form.Group as={Row} className='mt-3 mb-3'>
           <Col md={12}>
-            <Button
-              as='input'
-              type='submit'
-              className={styles.sendMessage}
-              value='Send Message'
-            />{" "}
+            <button type='submit' className={styles.sendMessage}>
+              {" "}
+              Send Message
+            </button>
           </Col>
         </Form.Group>
       </Form>{" "}
