@@ -1,0 +1,6 @@
+# redirect to .np
+http://amangurung.com/* https://www.amangurung.com.np/ 301!
+https://amangurung.com/* https://www.amangurung.com.np/ 301!
+
+http://amangurung.com/ https://www.amangurung.com.np/ 301!
+https://amangurung.com/ https://www.amangurung.com.np/ 301!
