@@ -23,7 +23,7 @@ const TechnicalSkills = () => {
                 layout: CONSTRAINED
                 quality: 75
                 height: 64
-                placeholder: DOMINANT_COLOR
+                placeholder: TRACED_SVG
               )
             }
           }

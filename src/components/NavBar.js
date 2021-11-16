@@ -47,7 +47,7 @@ const NavBar = () => {
         childImageSharp {
           gatsbyImageData(
             layout: CONSTRAINED
-            placeholder: BLURRED
+            placeholder: TRACED_SVG
             height: 53
             quality: 100
           )

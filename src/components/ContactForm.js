@@ -18,8 +18,8 @@ export default function ContactForm() {
         data-netlify-recaptcha='true'
         data-netlify='true'
       >
-        <input type='hidden' name='contact-form' value='contact' />
-
+        <input type='hidden' name='bot-field' />
+        <input type='hidden' name='form-name' value='contact' />
         <h2 className='text-center mb-4'>Get in touch</h2>
         <Form.Group as={Row} className='mb-3'>
           <Col md={12} lg={6} className='mb-3 mb-md-0'>
@@ -56,9 +56,8 @@ export default function ContactForm() {
           </Col>
         </Form.Group>
         <div
-          data-
           className='mb-3'
-          netlify-recaptcha='true'
+          data-netlify-recaptcha='true'
           style={{
             transform: "scale(0.77)",
             webkitTransform: "scale(0.77)",

@@ -57,7 +57,7 @@ export default function Projects() {
               gatsbyImageData(
                 layout: CONSTRAINED
                 quality: 90
-                placeholder: DOMINANT_COLOR
+                placeholder: BLURRED
               )
             }
           }

@@ -31,7 +31,7 @@ const LeftHeaderPanel = () => {
             className={`${styles.aboutMeBtn} text-center text-sm-left`}
             stripHash
           >
-            More About Me <FontAwesomeIcon icon={faArrowRight} />
+            More About Me <FontAwesomeIcon icon={faArrowRight} size='md' />
           </AnchorLink>
         </Col>
       </Row>
@@ -45,7 +45,7 @@ const RightHeaderPanel = () => {
       file(relativePath: { eq: "image.png" }) {
         id
         childImageSharp {
-          gatsbyImageData(layout: CONSTRAINED, width: 380)
+          gatsbyImageData(layout: CONSTRAINED, width: 380, placeholder: BLURRED)
         }
       }
     }
