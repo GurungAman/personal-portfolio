@@ -106,7 +106,7 @@ export default function AboutMe() {
             <Typist
               startDelay={600}
               className={styles.textCarousel}
-              cursor={{ blink: true }}
+              cursor={{ blink: true, hideWhenDone: false }}
               onTypingDone={infiniteTyping}
             >
               <span>A Developer.</span>

@@ -31,7 +31,7 @@ const LeftHeaderPanel = () => {
             className={`${styles.aboutMeBtn} text-center text-sm-left`}
             stripHash
           >
-            More About Me <FontAwesomeIcon icon={faArrowRight} size='md' />
+            More About Me <FontAwesomeIcon icon={faArrowRight} size='1x' />
           </AnchorLink>
         </Col>
       </Row>

@@ -30,7 +30,15 @@ const items = [
 
 const NavBar = () => {
   const [navBarDefault, setNavBarDefault] = useState(true);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 991.98);
   useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth < 991.98) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    });
     window.addEventListener("scroll", () => {
       if (window.scrollY > 150) {
         setNavBarDefault(false);
@@ -55,7 +63,6 @@ const NavBar = () => {
       }
     }
   `);
-
   const image = data.file.childImageSharp.gatsbyImageData;
 
   const navItems = items.map(({ name, path }) => {
@@ -65,13 +72,18 @@ const NavBar = () => {
         key={name}
         title={name}
         stripHash
-        className={navBarDefault ? styles.navItem : styles.hoverEffect}
+        className={
+          isMobile
+            ? styles.navItem
+            : navBarDefault
+            ? styles.navItem
+            : styles.hoverEffect
+        }
       >
         {name}
       </AnchorLink>
     );
   });
-
   return (
     <Navbar
       expand='lg'
@@ -92,7 +104,7 @@ const NavBar = () => {
 
         <Navbar.Toggle
           aria-controls='basic-navbar-nav'
-          className={styles.navBarToggler}
+          className={styles.navbarToggler}
         >
           <Hamburger
             size={40}

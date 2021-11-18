@@ -38,7 +38,7 @@ nav {
     border-top: solid rgb(0, 0, 0);
     border-bottom: solid rgb(0, 0, 0);
   }
-  .navItem {
+  .nav-item {
     padding: 0.5rem 1.4rem;
     font-size: 1.15rem;
     color: #2e2b12;
@@ -59,14 +59,14 @@ nav {
       );
     }
   }
-  .collapsingNavbar {
+  .collapsing-navbar {
     justify-content: flex-end;
   }
 }
 
 @media (max-width: 991.98px) {
   nav {
-    .navItem {
+    .nav-item {
       text-align: center;
       &:nth-child(4) {
         &:hover {
@@ -74,11 +74,11 @@ nav {
         }
       }
     }
-    .navBarToggler {
+    .navbar-toggler {
       border: none;
       z-index: 99999;
     }
-    .collapsingNavbar {
+    .collapsing-navbar {
       padding-top: 3.5rem;
       position: absolute;
       top: 0.5rem;
@@ -94,7 +94,7 @@ nav {
 
 @media (max-width: 767.98px) {
   nav {
-    .collapsingNavbar {
+    .collapsing-navbar {
       left: 2.5rem;
     }
     .brand {
@@ -105,11 +105,11 @@ nav {
 @media (max-width: 575.98px) {
   nav {
     padding: 0 1.5rem;
-    .collapsingNavbar {
+    .collapsing-navbar {
       left: 1.6rem;
       width: 90%;
     }
-    .navBarToggler {
+    .navBar-toggler {
       position: absolute;
       top: 0.5rem;
       right: 1.8rem;
