@@ -108,7 +108,7 @@ const NavBar = () => {
           className={styles.navbarToggler}
         >
           <Hamburger
-            size={40}
+            size={35}
             color='#000000'
             label='Show Menu'
             duration={0.3}
