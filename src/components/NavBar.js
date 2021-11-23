@@ -30,8 +30,9 @@ const items = [
 
 const NavBar = () => {
   const [navBarDefault, setNavBarDefault] = useState(true);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 991.98);
+  const [isMobile, setIsMobile] = useState(true);
   useEffect(() => {
+    setIsMobile(window.innerWidth < 991.98);
     window.addEventListener("resize", () => {
       if (window.innerWidth < 991.98) {
         setIsMobile(true);
