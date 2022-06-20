@@ -32,7 +32,7 @@ const TechnicalSkills = () => {
     }
   `);
   const logos = data.allFile.edges;
-  const test = logos.map(
+  const skills = logos.map(
     ({
       node: {
         id,
@@ -41,7 +41,7 @@ const TechnicalSkills = () => {
       },
     }) => {
       return (
-        <Col xs={4} key={id} className='d-flex justify-content-center'>
+        <Col xs={3} key={id} className='d-flex justify-content-center'>
           <GatsbyImage image={image} alt={name} className={styles.logo} />
         </Col>
       );
@@ -50,7 +50,7 @@ const TechnicalSkills = () => {
   return (
     <Col xs={12} md={6} className='mt-3 mt-md-0'>
       <h1 className='text-center mb-4'>Technical Skills</h1>
-      <Row>{test}</Row>
+      <Row>{skills}</Row>
     </Col>
   );
 };
@@ -62,11 +62,11 @@ const AboutMeContent = () => {
         <p className='text-center mb-4'>Hello.!</p>
       </h1>
       <p>My name is Aman Gurung.</p>
-      <p>Based in Pokhara, Nepal</p>
+      <p>I'm from Pokhara, Nepal</p>
       <p>
-        Currently in eight semester pursuing my studies in Bachelor's of Science
-        in Computer Science and Information Technology (B.Sc.CSIT) at Mount
-        Annapurna Campus (T.U. affiliate).
+        Graduated with a Bachelor's degreee in Computer Science and Information
+        Technology (B.Sc.CSIT) from Mount Annapurna Campus (T.U. affiliate) in
+        2022.
       </p>
       <p>A web developer specializing in backend development.</p>
       <p
