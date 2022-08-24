@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "personal-portfolio",
+    siteUrl: "https://www.amangurung.com.np/",
+    title: "Aman Gurung Personal Portfolio",
   },
   plugins: [
     "gatsby-plugin-styled-components",
